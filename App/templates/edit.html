@@ -1,0 +1,48 @@
+{% extends 'add.html' %}
+<!--- Title on tab browser --->
+<title>{% block title %}Edit Product{% endblock title %}</title>
+
+<!--- Navbar content --->
+    {% block navbar-content %}
+        <i class="text-warning fas fa-tshirt" ></i>&nbsp; &nbsp; Edit Product
+    {% endblock navbar-content %}
+
+<!--- Page Content --->
+
+{% block card-color %}border-dark bg-warning{% endblock card-color %}
+{% block card-title %}<strong>Registered at: </strong><span>{{product.created_at | date:'m/d/Y (H:i)'}}</span>{% endblock card-title %}
+
+<!--- Form action --->
+{% block action %} action="/add_product" {% endblock action %}
+
+<!--- Button action --->
+{% block button-action %}<i class="fas fa-server"></i>{% endblock button-action %}
+
+
+<!--- ==================== <INPUTs> ==================== --->
+<!--- ID--->
+{% block value-id %}
+<div class="input-group mb-3">
+    <span class="side-label btn border-secondary bg-light"><i class="fas fa-key"></i></span>
+    <input type="text" name="id" class="form-control" value="{{product.id}}" readonly>
+</div>
+{% endblock value-id %}
+
+<!--- PRODUCT --->
+{% block value-product %}value="{{product.product}}"{% endblock value-product %}
+
+<!--- PURCHASE --->
+{% block value-purchase %}value="{{product.purchase}}"{% endblock value-purchase %}
+
+<!--- SALE --->
+{% block value-sale %}value="{{product.sale}}"{% endblock value-sale %}
+
+<!--- QTY --->
+{% block value-qty %}value="{{product.qty}}"{% endblock value-qty %}
+
+<!--- GENDER --->
+{% block option %} <option style="background-color: #d3d3d3; color: #111;">{{ product.gender }}</option> {% endblock option %}
+
+<!--- NOTE --->
+{% block note %}{{product.note}}{% endblock note %}
+

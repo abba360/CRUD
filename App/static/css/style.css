@@ -1,0 +1,38 @@
+/*-------------------------------
+#  START CONFIRGURATION 
+--------------------------------*/
+html,
+body{
+    overflow: inherit;
+    height: 100%;
+    margin: 0;
+    max-width: 100%;
+    
+}   
+/*-------------------------------
+#  FOOTER 
+--------------------------------*/
+.wrapper{
+    min-height: 100%;
+    margin-bottom: -50px;
+       
+}
+
+#footer,
+.push{
+    height: 50x;
+    max-width: 100%;
+
+}
+
+/*-------------------------------
+OTHERS
+--------------------------------*/
+.side-label{
+    width: 45px;
+}
+.container{ 
+    max-width: 100%;
+    scroll-behavior: auto;
+
+}
